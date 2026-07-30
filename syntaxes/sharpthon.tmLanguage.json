@@ -1,0 +1,142 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SharpThon",
+  "scopeName": "source.spy",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.sharpthon",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.sharpthon",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.sharpthon",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "string.interpolated.sharpthon",
+          "match": "f\".*\""
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.sharpthon",
+          "match": "\\b(def|class|if|elif|else|for|while|import|return|try|catch|except|finally|go|await|in)\\b"
+        },
+        {
+          "name": "keyword.other.sharpthon",
+          "match": "\\b(public|private|protected|static)\\b"
+        },
+        {
+          "name": "support.function.sharpthon",
+          "match": "\\b(Write)\\b"
+        },
+        {
+          "name": "constant.language.sharpthon",
+          "match": "\\b(true|false|null)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.sharpthon",
+          "match": "\\b(int|str|bool|float|long|double|object|Any|void)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.sharpthon",
+          "match": "\\bdef\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.sharpthon"
+            }
+          }
+        },
+        {
+          "name": "entity.name.function.call.sharpthon",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*\\(",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.call.sharpthon"
+            }
+          }
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.sharpthon",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*=",
+          "captures": {
+            "1": {
+              "name": "variable.other.sharpthon"
+            }
+          }
+        },
+        {
+          "name": "variable.other.sharpthon",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*:"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.sharpthon",
+          "match": "\\b\\d+\\.?\\d*\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.sharpthon",
+          "match": "(->|\\+\\+|\\+=|-=|==|!=|<=|>=|&&|\\|\\|)"
+        }
+      ]
+    }
+  }
+}
