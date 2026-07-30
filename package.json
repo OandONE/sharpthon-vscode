@@ -1,0 +1,41 @@
+{
+  "name": "sharpthon",
+  "displayName": "SharpThon",
+  "description": "Syntax highlighting and snippets for SharpThon (.spy) language",
+  "version": "0.1.0",
+  "publisher": "OandONE",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "sharpthon",
+        "aliases": ["SharpThon", "sharpthon", "spy"],
+        "extensions": [".spy"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sharpthon",
+        "scopeName": "source.spy",
+        "path": "./syntaxes/sharpthon.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sharpthon",
+        "path": "./snippets/sharpthon.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OandONE/sharpthon-vscode"
+  }
+}
