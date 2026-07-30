@@ -1,0 +1,112 @@
+{
+  "def function": {
+    "prefix": "def",
+    "body": [
+      "def ${1:name}(${2:args}) -> ${3:void} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Define a function"
+  },
+  "if statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  "elif statement": {
+    "prefix": "elif",
+    "body": [
+      "elif (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Else if statement"
+  },
+  "else statement": {
+    "prefix": "else",
+    "body": [
+      "else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Else statement"
+  },
+  "for loop": {
+    "prefix": "for",
+    "body": [
+      "for (${1:i} in ${2:10}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For in range loop"
+  },
+  "while loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "try catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "\t$0",
+      "}",
+      "catch (${1:Exception} as ${2:ex}) {",
+      "\t",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:Name} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Class definition"
+  },
+  "import module": {
+    "prefix": "import",
+    "body": [
+      "import ${1:module}"
+    ],
+    "description": "Import a spy module"
+  },
+  "Write": {
+    "prefix": "Write",
+    "body": [
+      "Write(\"${1:message}\")"
+    ],
+    "description": "Write to console"
+  },
+  "f-string": {
+    "prefix": "f",
+    "body": [
+      "f\"${1:}\""
+    ],
+    "description": "F-string interpolation"
+  },
+  "go": {
+    "prefix": "go",
+    "body": [
+      "go ${1:function}()"
+    ],
+    "description": "Fire and forget task"
+  },
+  "await go": {
+    "prefix": "await",
+    "body": [
+      "await go ${1:function}()"
+    ],
+    "description": "Await a task"
+  }
+}
